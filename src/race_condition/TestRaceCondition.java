@@ -1,8 +1,9 @@
 package race_condition;
 
 public class TestRaceCondition implements Runnable {
+	
+	//the initialized inventory variable
 	private int inventory = 1;
-	long twoSeconds = 2000;
 
 	public static void main(String[] args) {
 		TestRaceCondition prc = new TestRaceCondition();
@@ -13,11 +14,14 @@ public class TestRaceCondition implements Runnable {
 	}
 
 	public void run() {
+		
+		//two thread are executing the same critical section but the decrement happens two times because 
+		
 		//synchronized (this) {
 			if (inventory > 0) {
 				try {
 					System.out.println("Thread " + Thread.currentThread().getName() + " starting with inventory: " + inventory);
-					Thread.sleep(twoSeconds);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// no op
 				}
