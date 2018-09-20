@@ -4,7 +4,7 @@ package starvation_and_fairness;
  * A simple implementation of the Lock class could look like this:
  * 
  * 
- * f you look at the Synchronizer class above and look into this Lock
+ * If you look at the Synchronizer class above and look into this Lock
  * implementation you will notice that threads are now blocked trying to access
  * the lock() method, if more than one thread calls lock() simultanously.
  * Second, if the lock is locked, the threads are blocked in the wait() call
