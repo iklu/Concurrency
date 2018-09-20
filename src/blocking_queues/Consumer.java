@@ -2,9 +2,9 @@ package blocking_queues;
 
 public class Consumer implements Runnable {
 
-    protected BlockingQueue queue = null;
+    protected BlockingQueue<Integer> queue = null;
 
-    public Consumer(BlockingQueue queue) {
+    public Consumer(BlockingQueue<Integer> queue) {
         this.queue = queue;
     }
 
